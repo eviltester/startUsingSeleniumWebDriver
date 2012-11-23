@@ -18,5 +18,6 @@ public class MyFirstTest {
                             driver.getTitle().startsWith("Selenium Simplified"));
 
         driver.close();
+        driver.quit();
     }
 }
