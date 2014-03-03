@@ -19,6 +19,5 @@ public class MyFirstTest {
 
         driver.close();
         driver.quit();
-
     }
 }
