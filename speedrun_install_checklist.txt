@@ -1,0 +1,132 @@
+http://seleniumsimplified.com/speedrun-installs/
+
+Generic Selenium WebDriver Windows Install Speedrun checklist
+=============================================================
+
+[ ] Check what you need to install by typing console commands
+    [ ] "javac -version"
+          - if it fails install java jdk
+    [ ] "mvn -version"
+          - if it fails install maven
+
+[ ] Install Current version of Firefox
+
+[ ] Download Java
+     [ ] search for "download java sdk" (do not install the normal JRE from java.com)
+
+[ ] Install Java JDK
+     - e.g. C:\Program Files\Java\jdk1.7.0_10
+     [ ] add the Java "\bin" folder to the path if it hasn't been added 
+	     e.g. C:\Program Files\Java\jdk1.7.0_10\bin
+     [ ] create a JAVA_HOME environment variable while there for the root path 
+	     e.g. C:\Program Files\Java\jdk1.7.0_10
+         - some people add a JDK_HOME for the root path as well (I haven't done this)
+
+[ ] Install Maven
+     [ ] Download Maven http://maven.apache.org/download.html#Installation
+     [ ] Unzip maven to a directory (avoid one with spaces in it)
+          - e.g. C:\mvn\apache-maven-3.0.4
+     [ ] create maven environment variables
+[ ] create an M2_HOME in System Variables
+     - C:\mvn\apache-maven-3.0.4
+[ ] add %M2_HOME%\bin to the path in System Variables
+
+[ ] everything is installed, check the environment variables by displaying them on the console
+     [ ] echo %M2_HOME%
+     [ ] echo %JAVA_HOME%
+
+[ ] Download Test Project (this has a simple pom.xml and a basic test to run)
+     [ ] visit https://github.com/eviltester/startUsingSeleniumWebDriver
+     [ ] download the zip file and unzip somewhere
+
+[ ] check most up to date version of webdriver in the unzipped pom.xml file
+     [ ] check the webdriver downloads page or the maven page for the up to date version
+     [ ] amend the pom.xml file if the version number is not up to date
+
+[ ] run my first test from the command line
+     [ ] use the command line to "cd" to the directory you unarchived the source code to
+     [ ] mvn test -Dtest=MyFirstTest
+
+[ ] Install and run IntelliJ Community Edition
+
+[ ] open project for the unzipped pom.xml file
+
+[ ] run MyFirstTest class
+     [ ] right click on the class in the project window and select "Run 
+     [ ] you may need to tell intellij where the SDK is, 
+	     - use the project settings to create an new SDK config
+           using the JAVA_HOME path above
+
+[ ] When the test runs from the IDE, you are finished your install and setup
+
+Generic Links:
+==============
+
++ Download Java SDK From
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+  - 1.8 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+  - 1.7 http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+
++ Download Maven From
+http://maven.apache.org/download.cgi
+
++ sample test project from
+https://github.com/eviltester/startUsingSeleniumWebDriver
+
++ Check current webdriver version from
+http://docs.seleniumhq.org/download/
+or
+http://docs.seleniumhq.org/download/maven.jsp
+
++ Download IntelliJ from
+http://www.jetbrains.com/idea/download/
+
+Installation on XP Notes:
+=========================
+
+- I installed using the Windows XP VM from modern.ie, 
+  with Java 1.7, maven 3.2.3, Webdriver 2.43.1, IntelliJ 13.1.5
+
+- need to use JDK 1.7, JDK 1.8 reports a warning on Windows XP
+
+- download a different text editor to edit the pom.xml (I used notepad++)
+     - You may need to download a better editor than notepad.exe I use notepad++
+     -  download notepad ++ from 
+     http://notepad-plus-plus.org/download
+
+- You need to 'unblock' Java and the IDE etc. 
+  for the Windows Firewall as you run through the checklist. 
+  Do this, otherwise they won't be able to work
+
+- Edit SDK by right clicking and choosing "Open Module Settings", 
+  then edit the SDK for the Project and press [OK]
+  - choose the location of the Java JDK you installed 
+    (sometimes you don't have to do this)
+
++ After test passes in the IDE - ignore the Info Message from WebDriver
+
+"Oct 07, 2014 10:40:36 AM org.openqa.selenium.os.UnixProcess$SeleniumWatchDog destroyHarder
+INFO: Command failed to close cleanly. Destroying forcefully (v2). 
+org.openqa.selenium.os.UnixProcess$SeleniumWatchDog@da44a7
+
+Process finished with exit code 0
+"
+It worked fine
+
+Other Related Links
+===================
+- detailed video walkthrough of Install Maven
+http://www.youtube.com/watch?v=Jtj-0yhox5s&feature=share&list=PLrM2ELpRbbu5cWJbRuzpAr6SR40Gb0QHU&index=9
+
+- notes on supporting tools
+http://seleniumsimplified.com/2013/10/supporting-notes-and-handouts-for-our-getting-started-online-course/
+
+- notes on installing maven
+http://seleniumsimplified.com/2012/09/installing-maven-for-webdriver-on-windows-7
+
+- Free Selenium Getting Started course provides more details on all the above steps
+http://seleniumsimplified.com/get-started
+
+- Full Selenium Course to continue your learning
+http://unow.be/at/learnwebdriver
+
