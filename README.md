@@ -9,6 +9,15 @@ You can find the Free Online course here:
 
 The source code has only really been uploaded in case people encounter problems following the instructions or make a very simple mistake that they cannot figure out.
 
+Please read the comments below, and the source code comments if you are having trouble starting work with Firefox. Especially if you are using Firefox v 47.
+
+
+
+
+## Update 22nd June 2016
+
+Added information about using portable firefox driver and more comments.
+
 ## Update 25th April 2016
 
 Firefox 46 changes the way that WebDriver has to interact with it. So the built in `FirefoxDriver` will not work. You need to install Firefox 45 from [Firefox Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/all/) to continue using `FirefoxDriver`.
@@ -16,6 +25,16 @@ Firefox 46 changes the way that WebDriver has to interact with it. So the built 
 If you want to use Firefox 46 and later then you need to use the [Marionette](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver) driver.
 
 Follow the instructions on the Marionette page to download it. You do not need to add it to your path, you can control that through a system property - see the code in this project for more detail.
+
+You can also use portable Firefox as described in this blog post
+
+* http://seleniumsimplified.com/2016/06/using-portable-firefox-46-with-webdriver/
+
+All of this is explained in the source code, or in the blog posts:
+
+* http://seleniumsimplified.com/2016/04/how-to-use-the-firefox-marionette-driver/
+* http://seleniumsimplified.com/2016/06/using-portable-firefox-46-with-webdriver/
+
 
 ## Pre April 2016 updates
 
