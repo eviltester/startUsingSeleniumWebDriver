@@ -32,9 +32,10 @@ public class MyFirstTest {
          */
 
 
-        /**  NOTE: For Firefox 46 and below only
-         * The following code will work on Firefox version 46 and below
-         * It will not work on Firefox versions which require Marionette (47 and above)
+        /**  NOTE:
+         * The following code will work on Firefox versions which support in built FirefoxDriver
+         * e.g. 46 and below and 47.1
+         * It will not work on Firefox versions which require Marionette (47)
          * If you want to keep using version 45 then you can download it from here:
          * https://www.mozilla.org/en-US/firefox/organizations/all/
          */

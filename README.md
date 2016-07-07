@@ -12,7 +12,15 @@ The source code has only really been uploaded in case people encounter problems 
 Please read the comments below, and the source code comments if you are having trouble starting work with Firefox. Especially if you are using Firefox v 47.
 
 
+## Update 7th July 2016
 
+Firefox 47 was incompatible with Selenium 2.53.0 so we needed to use marionette driver.
+
+Firefox 47.1 is compatible with Selenium 2.53.1 allowing us to use the `FirefoxDriver` again.
+
+The blog post below describes how to use a local version of Selenium with maven if any incompatibility happens again and you need to move to a different version of WebDriver which is not on maven central.
+
+* http://seleniumsimplified.com/2016/06/use_selenium_webdriver_jar_locally/
 
 ## Update 22nd June 2016
 
@@ -20,9 +28,9 @@ Added information about using portable firefox driver and more comments.
 
 ## Update 25th April 2016
 
-Firefox 46 changes the way that WebDriver has to interact with it. So the built in `FirefoxDriver` will not work. You need to install Firefox 45 from [Firefox Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/all/) to continue using `FirefoxDriver`.
+Firefox 46 changes the way that WebDriver has to interact with it. So the built in `FirefoxDriver` did not work. You need to install Firefox 45 from [Firefox Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/all/) to continue using `FirefoxDriver`.
 
-If you want to use Firefox 46 and later then you need to use the [Marionette](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver) driver.
+If you want to use Firefox 46 and later then you may need to use the [Marionette](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver) driver.
 
 Follow the instructions on the Marionette page to download it. You do not need to add it to your path, you can control that through a system property - see the code in this project for more detail.
 

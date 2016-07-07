@@ -9,11 +9,43 @@
     <version>1.0</version>
 
     <dependencies>
+
+
+        <!-- Firefox 47 introduced a bug making it fail with 2.53.0, you needed to use the marionette driver -->
+        <!-- Firefox 47.1 is required for Selenium 2.53.1 -->
+        <!--
+            if you are having issues with Firefox crashing then you might be using a
+            Firefox and Selenium version combination that are out of sync or may be using
+            a version of Firefox that requires the Marionette/wires/geckodriver combination
+
+            Read the following blog posts for more information:
+            - http://seleniumsimplified.com/2016/06/use_selenium_webdriver_jar_locally/
+            - http://seleniumsimplified.com/2016/04/how-to-use-the-firefox-marionette-driver/
+            - http://seleniumsimplified.com/2016/06/using-portable-firefox-46-with-webdriver/
+        -->
+
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.53.0</version>
+            <version>2.53.1</version>
         </dependency>
+
+        <!--
+            When Selenium 2.53.1 was available but not released to maven central I used the following
+            code to use the new version. As written up in this blog post
+            http://seleniumsimplified.com/2016/06/use_selenium_webdriver_jar_locally/
+        -->
+        <!--
+        <dependency>
+            <groupId>selenium_2_53_1</groupId>
+            <artifactId>com.seleniumhq.selenium_2_53_1 </artifactId>
+            <version>2.53.1</version>
+            <scope>system</scope>
+            <systemPath>C:/Users/Alan/Downloads/selenium-2.53.1/selenium-server-standalone-2.53.1.jar</systemPath>
+        </dependency>
+        -->
+
 
         <!-- Uncomment the dependency below if you want
              full access to hamcrest matchers
