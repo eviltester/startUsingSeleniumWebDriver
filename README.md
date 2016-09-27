@@ -12,6 +12,26 @@ The source code has only really been uploaded in case people encounter problems 
 Please read the comments below, and the source code comments if you are having trouble starting work with Firefox. Especially if you are using Firefox v 47.
 
 
+If you are using Firefox 45 Extended Release version then to run the test from the command line use:
+
+`mvn test -Dtest=MyFirstTest`
+
+If you are using Firefox 48+ and have added Marionette to the path then use the command line:
+
+`mvn test -Dtest=MyFirstTestFF48`
+
+
+## Update 27th September 2016
+
+I have added two tests into the code:
+
+* `MyFirstTest`
+* `MyFirstTestFF48`
+
+`MyFirstTest` has all the comments explaining all the multiple uses of Firefox and defaults to using the FirefoxDriver - in selenium 2 this will only work with Firefox 47 or below. With Selenium 3 you could run this if Marionette driver is on the path.
+
+`MyFirstTestFF48` is a cut down test that uses the MarionetteDriver and assumes that wires.exe is on the path.
+
 ## Update 7th July 2016
 
 Firefox 47 was incompatible with Selenium 2.53.0 so we needed to use marionette driver.
