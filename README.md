@@ -20,6 +20,17 @@ If you are using Firefox 48+ and have added Marionette to the path then use the 
 
 `mvn test -Dtest=MyFirstTestFF48`
 
+If you are using Chrome and have added ChromeDriver to the path then use the command line:
+
+`mvn test -Dtest=MyFirstChromeTest`
+
+## Update 30th September 2016
+
+I have added a test for ChromeDriver into the code:
+
+* `MyFirstChromeTest`
+
+This has comments explaining where to locate the chromedriver.exe or just add the folder with chromedriver.exe to the path.
 
 ## Update 27th September 2016
 

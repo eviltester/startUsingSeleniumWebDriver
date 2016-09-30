@@ -11,8 +11,9 @@
     <dependencies>
 
 
-        <!-- Firefox 47 introduced a bug making it fail with 2.53.0, you needed to use the marionette driver -->
-        <!-- Firefox 47.1 is required for Selenium 2.53.1 -->
+        <!-- Firefox 47 introduced a bug making it fail with 2.53.0, you needed to use the marionette gecko driver -->
+        <!-- Firefox 48+ require the marionette gecko driver -->
+        <!-- Firefox 45, 46, or 47.1 is required for Selenium 2.53.1 -->
         <!--
             if you are having issues with Firefox crashing then you might be using a
             Firefox and Selenium version combination that are out of sync or may be using
@@ -46,30 +47,6 @@
         </dependency>
         -->
 
-
-        <!-- Uncomment the dependency below if you want
-             full access to hamcrest matchers
-
-             see https://github.com/hamcrest/JavaHamcrest
-             you can add hamcrest-core for the foundation matchers
-             and you can add hamcrest-library for more extensive libraries
-             or you can add hamcrest-all for everything if you don't want to think about it
-        -->
-
-        <!--
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-        -->
 
         <dependency>
             <groupId>junit</groupId>
