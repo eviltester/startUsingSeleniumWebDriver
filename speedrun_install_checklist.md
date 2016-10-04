@@ -19,6 +19,16 @@ http://seleniumsimplified.com/speedrun-installs/
     - check installs work by running the sample test from IntelliJ
     - run sample tests from command line
 
+*Windows Install Videos*
+
+* [YouTube Video Showing the Java Install on Windows 10](https://www.youtube.com/watch?v=j-46lYWAHF0)
+* [YouTube Video Showing the WebDriver Install on Windows 10](https://www.youtube.com/watch?v=gteqOBS_Ln4)
+
+*Mac Install Videos*
+
+* [YouTube Video Showing the Java Install on a Mac](https://youtu.be/ff5ZsthcSZw)
+* [YouTube Video Showing the WebDriver Install on a Mac](https://youtu.be/nq97dfaVmC4)
+
 
 # Windows Install Speedrun checklist
  
@@ -98,7 +108,6 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 
 * [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
 * [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
-
 
 
 ## Install WebDriver Sample Project on Mac
