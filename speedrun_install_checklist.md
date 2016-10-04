@@ -19,86 +19,158 @@ http://seleniumsimplified.com/speedrun-installs/
     - check installs work by running the sample test from IntelliJ
     - run sample tests from command line
 
+
 # Windows Install Speedrun checklist
+ 
+## Install Java Pre-requisites
 
-## Install Java Pre-requisites - Install Java Speedrun on Windows
+For instructions on how to install Java, Maven and IntelliJ; and check they are working, use the checklist in `startUsingJavaJunit` project:
 
-* `[ ]` Check what you need to install by typing console commands
-    * `[ ]` "javac -version"
-          - if it fails install java jdk
-    * `[ ]` "mvn -version"
-          - if it fails install maven
+* [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
+* [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
 
-* `[ ]` Download Java
-    * `[ ]` search for "download java sdk" (do not install the normal JRE from java.com)
-         - http://www.oracle.com/technetwork/java/javase/downloads/index.html
+## Install Sample WebDriver Project on Windows
 
-* `[ ]` Install Java JDK
-    * `[ ]` Windows
-        - e.g. `C:\Program Files\Java\jdk1.8.0_102`
-        * `[ ]` add the Java "\bin" folder to the path if it hasn't been added
-           e.g. `C:\Program Files\Java\jdk1.8.0_102\bin`
-        * `[ ]` create a JAVA_HOME environment variable while there for the root path
-            e.g. `C:\Program Files\Java\jdk1.8.0_102`
-            - some people add a `JDK_HOME` for the root path as well (I haven't done this)
-        * `[ ]` check Java JDK installed by typing `javac -version` in a new command line
+* `[ ]`Download Test Project (this has a simple pom.xml and a basic test to run)
+    * `[ ]`visit https://github.com/eviltester/startUsingSeleniumWebDriver
+    * `[ ]`download the zip file and unzip somewhere
 
-* `[ ]` Install Maven
-    * `[ ]` Download Maven http://maven.apache.org/download.html#Installation
-    * `[ ]` Windows
-        * `[ ]` Unzip maven to a directory (avoid one with spaces in it)
-            - e.g. `C:\maven_3_3_9`
-        * `[ ]` add `C:\maven_3_3_9\bin` to the `PATH` in System Variables
-        * `[ ]` check installed by typing `mvn -version` into a new command window
+* `[ ]`Install and run IntelliJ Community Edition
 
-* `[ ]` everything is installed, check the environment variables by displaying them on the console
-    * `[ ]` Windows
-        * `[ ]` `echo %JAVA_HOME%`
-        * `[ ]` `echo %PATH%`
+* `[ ]`open project for the unzipped pom.xml file
+
+* `[ ]`check most up to date version of webdriver in the unzipped pom.xml file
+    * `[ ]`check the webdriver downloads page or the maven page for the up to date version
+    * `[ ]`amend the pom.xml file if the version number is not up to date
+    * `[ ]`exit IntelliJ
 
 
-* `[ ]` Download JUnit Test Project (this has a simple pom.xml and a basic test to run)
-    * `[ ]` visit https://github.com/eviltester/startUsingJavaJUnit
-    * `[ ]` download the zip file and unzip somewhere
+##  Install Firefox and Marionette GeckoDriver on Windows
 
-* `[ ]` run my first test from the command line
-    * `[ ]` use the command line to "cd" to the directory you unarchived the source code to
-    * `[ ]` `mvn test`
+* `[ ]`If install ESR version of Firefox (45) https://www.mozilla.org/en-US/firefox/organizations/faq/
+      * `[ ]`no need to download any extra drivers
+      * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
 
-If it runs successfully then you have Java and Maven Installed in Windows.
+* `[ ]`Install Current version of Firefox
+      * `[ ]`download GeckoDriver add it to the path
+            * https://github.com/mozilla/geckodriver
+       * https://github.com/mozilla/geckodriver/releases
+      * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTestFF48`
 
-## Install IntelliJ for Java  - Install IntelliJ Java Speedrun on Windows
+##  Install Chrome and ChromeDriver on Windows
 
-
-* `[ ]`  download IntelliJ Community Edition from https://www.jetbrains.com/idea
-* `[ ]`  install it
-* `[ ]`  new project from existing sources
-* `[ ]`  open the `pom.xml` from the folder that we placed the downloads from https://github.com/eviltester/startUsingJavaJUnit
-* `[ ]`  we may need to configure IntelliJ to use the Java SDK we installed earlier, if so, follow the IntelliJ prompts
-    * `[ ]` you may need to tell intellij where the SDK is,
-        - use the project settings to create an new SDK config
-          using the `JAVA_HOME` path above
-* `[ ]`  right click on the test and 'run' the test
-* `[ ]`  if it passes it means that Java, Maven, IntelliJ are all now installed and ready to use
+* `[ ]`Install Current version of Chrome
+      * `[ ]`download ChromeDriver add it to the path
+            * https://sites.google.com/a/chromium.org/chromedriver/
+      * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstChromeTest`
 
 
-# Mac Install Speedrun checklist
+##  Run Test From IDE on Windows
 
-*TODO*
+* `[ ]`Back in IntelliJ
+
+* `[ ]`run MyFirstTest, or MyFirstTestFF48 or MyFirstChromeTest class
+    * `[ ]`right click on the class in the project window and select "Run 
+
+* `[ ]`When the test runs from the IDE, you are finished your install and setup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Mac Install Speedrun checklist - Homebrew
+
+
+## Install Java Pre-requisites
+
+For instructions on how to install Java, Maven and IntelliJ; and check they are working, use the checklist in `startUsingJavaJunit` project:
+
+* [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
+* [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
+
+
+
+## Install WebDriver Sample Project on Mac
+
+* `[ ]`Install Java JDK, Maven - see [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
+* `[ ]`Install and run IntelliJ Community Edition - see [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
+
+* `[ ]`Download Test Project (this has a simple pom.xml and a basic test to run)
+    * `[ ]`visit https://github.com/eviltester/startUsingSeleniumWebDriver
+    * `[ ]`download the zip file and unzip somewhere
+
+* `[ ]`open project for the unzipped pom.xml file
+
+* `[ ]`check most up to date version of webdriver in the unzipped pom.xml file
+    * `[ ]`check the [Selenium webdriver downloads](http://www.seleniumhq.org/download/) page or the maven page for the up to date version
+        * I do not recommend using a beta version
+    * `[ ]`amend the `pom.xml` file if the version number is not up to date
+    * `[ ]`exit IntelliJ
+
+
+##  Install Firefox and Marionette GeckoDriver on Mac
+
+* `[ ]`If install ESR version of Firefox (45) https://www.mozilla.org/en-US/firefox/organizations/faq/
+   * `[ ]`no need to download any extra drivers
+   * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
+
+* `[ ]`Install Current version of Firefox
+   * either with cask `brew cask install firefox`
+        * or visit the site and install
+* `[ ]`download GeckoDriver add it to the path
+   * https://github.com/mozilla/geckodriver
+   * https://github.com/mozilla/geckodriver/releases
+   * extract into a folder and rename to wires
+   * add path to `.bash_profile`
+   * `export PATH=$PATH:/folder/you/extracted/it/to`
+   * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTestFF48`
+
+##  Install Chrome and ChromeDriver on Mac
+
+* `[ ]`Install Current version of Chrome
+      * either with cask `brew cask install google-chrome`
+      * or visit the site and install
+
+& `[ ]` Install ChromeDriver 
+      * `[ ]`download ChromeDriver add it to the path
+            * https://sites.google.com/a/chromium.org/chromedriver/
+      * extract into a folder
+      * add folder path to `.bash_profile`
+      * `export PATH=$PATH:/folder/you/extracted/it/to`
+      * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstChromeTest`
+      
+##  Run Test From IDE on Windows
+
+* `[ ]`Back in IntelliJ
+
+* `[ ]`run MyFirstTest, or MyFirstTestFF48 or MyFirstChromeTest class
+    * `[ ]`right click on the class in the project window and select "Run 
+
+* `[ ]`When the test runs from the IDE, you are finished your install and setup
+
+
+
+
+    
 
 Generic Links:
 ==============
 
-+ Download Java SDK From
-http://www.oracle.com/technetwork/java/javase/downloads/index.html
-  - 1.8 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-  - 1.7 http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
-
-+ Download Maven From
-    * http://maven.apache.org/download.cgi
 
 + sample JUnit test project from
     * https://github.com/eviltester/startUsingJavaJUnit
+    * [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
 
 + Download IntelliJ from
     * http://www.jetbrains.com/idea/download/
@@ -116,6 +188,11 @@ http://www.oracle.com/technetwork/java/javase/downloads/index.html
 + Mozilla GeckoDriver
     * https://github.com/mozilla/geckodriver
     * https://github.com/mozilla/geckodriver/releases
+
++ Mac HomeBrew and Cask
+    * http://brew.sh
+    * https://caskroom.github.io/
+
 
 
 Installation on Windows 10 Notes:
@@ -210,23 +287,4 @@ Installation on Mac Notes:
   in the middle, but I restarted wifi and ran the mvn command again 
   and it completed fine - one reason to use Maven
 
-
-
-
-Other Related Links
-===================
-- detailed video walkthrough of Install Maven
-http://www.youtube.com/watch?v=Jtj-0yhox5s&feature=share&list=PLrM2ELpRbbu5cWJbRuzpAr6SR40Gb0QHU&index=9
-
-- notes on supporting tools
-http://seleniumsimplified.com/2013/10/supporting-notes-and-handouts-for-our-getting-started-online-course/
-
-- notes on installing maven
-http://seleniumsimplified.com/2012/09/installing-maven-for-webdriver-on-windows-7
-
-- Free Selenium Getting Started course provides more details on all the above steps
-http://seleniumsimplified.com/get-started
-
-- Full Selenium Course to continue your learning
-http://unow.be/at/learnwebdriver
 

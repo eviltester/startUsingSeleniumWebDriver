@@ -1,16 +1,30 @@
 startUsingSeleniumWebDriver
 ===========================
 
-Source code to support the free Online course Start Using Selenium WebDriver with Java
-
-You can find the Free Online course here:
-
-[http://seleniumsimplified.com/get-started/ "Free course start-using-selenium-webdriver-with-java")
+Source code to support getting started using Selenium WebDriver with Java
 
 The source code has only really been uploaded in case people encounter problems following the instructions or make a very simple mistake that they cannot figure out.
 
 Please read the comments below, and the source code comments if you are having trouble starting work with Firefox. Especially if you are using Firefox v 47.
 
+
+
+## Steps
+
+* First install Java, Maven and IntelliJ
+    * [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
+* Second install Firefox, GeckoDriver, Chrome and ChromeDriver
+    * [WebDriver Install Checklist](https://github.com/eviltester/startUsingSeleniumWebDriver/blob/master/speedrun_install_checklist.md)
+
+
+
+*Author: Alan Richardson*
+
+* [SeleniumSimplified.com](http://seleniumsimplified.com)
+* [Compendium Developments](http://compendiumdev.co.uk)
+
+
+## Notes
 
 If you are using Firefox 45 Extended Release version then to run the test from the command line use:
 
@@ -23,6 +37,10 @@ If you are using Firefox 48+ and have added Marionette to the path then use the 
 If you are using Chrome and have added ChromeDriver to the path then use the command line:
 
 `mvn test -Dtest=MyFirstChromeTest`
+
+## Update 4th October 2016
+
+* Added the Mac Instructions, and moved Java install to the [Java checklist and project](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
 
 ## Update 30th September 2016
 
