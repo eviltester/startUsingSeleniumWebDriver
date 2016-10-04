@@ -142,7 +142,7 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
       * either with cask `brew cask install google-chrome`
       * or visit the site and install
 
-& `[ ]` Install ChromeDriver 
+* `[ ]` Install ChromeDriver 
       * `[ ]`download ChromeDriver add it to the path
             * https://sites.google.com/a/chromium.org/chromedriver/
       * extract into a folder
