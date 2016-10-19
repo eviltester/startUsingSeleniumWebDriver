@@ -25,27 +25,29 @@
             - http://seleniumsimplified.com/2016/06/using-portable-firefox-46-with-webdriver/
         -->
 
+        <!-- Explanation of versions
+            3.0.1
+                Firefox 48+ - geckodriver.exe on path and use MyFirstTest to run in Firefox
+                Firefox < 48 - use MyFirstLegacyFFTest
+            2.53.1
+                Firefox < 48 - use MyFirstTest to run in Firefox
+                Firefox 48+ - geckodriver.exe renamed to wires.exe and on path and use MyFirstTestFF48
+
+            Version Independent
+                MyFirstChromeTest will work if ChromeDriver is on the path for either version
+        -->
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>2.53.1</version>
+            <!-- 19/October.2016
+                version 3.0.1 will work,
+                have just left as v 2.53.1 for the moment,
+                you can upgrade by deleting the above line and
+                removing the html comment tags from the line below -->
+			<!-- <version>3.0.1</version> -->
         </dependency>
-
-        <!--
-            When Selenium 2.53.1 was available but not released to maven central I used the following
-            code to use the new version. As written up in this blog post
-            http://seleniumsimplified.com/2016/06/use_selenium_webdriver_jar_locally/
-        -->
-        <!--
-        <dependency>
-            <groupId>selenium_2_53_1</groupId>
-            <artifactId>com.seleniumhq.selenium_2_53_1 </artifactId>
-            <version>2.53.1</version>
-            <scope>system</scope>
-            <systemPath>C:/Users/Alan/Downloads/selenium-2.53.1/selenium-server-standalone-2.53.1.jar</systemPath>
-        </dependency>
-        -->
 
 
         <dependency>

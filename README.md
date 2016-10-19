@@ -5,8 +5,7 @@ Source code to support getting started using Selenium WebDriver with Java
 
 The source code has only really been uploaded in case people encounter problems following the instructions or make a very simple mistake that they cannot figure out.
 
-Please read the comments below, and the source code comments if you are having trouble starting work with Firefox. Especially if you are using Firefox v 47.
-
+Please read the comments below, and the source code comments if you are having trouble starting work with Firefox.
 
 
 ## Steps
@@ -17,6 +16,13 @@ Please read the comments below, and the source code comments if you are having t
     * [WebDriver Install Checklist](https://github.com/eviltester/startUsingSeleniumWebDriver/blob/master/speedrun_install_checklist.md)
 
 
+If you are using Chrome and have added ChromeDriver to the path then use the command line:
+
+`mvn test -Dtest=MyFirstChromeTest`
+
+**For Firefox see the notes below for the version of Selenium WebDriver you are using.**
+
+Do not run `mvn test` because some of the tests are WebDriver version dependant and at least one will fail.
 
 *Author: Alan Richardson*
 
@@ -24,19 +30,55 @@ Please read the comments below, and the source code comments if you are having t
 * [Compendium Developments](http://compendiumdev.co.uk)
 
 
-## Notes
+See related blog posts:
 
-If you are using Firefox 45 Extended Release version then to run the test from the command line use:
+* http://seleniumsimplified.com/2016/10/update-on-marionette-geckodriver-v0-11-1-q-should-you-try-it-a-yes-you-should/
+* http://seleniumsimplified.com/2016/10/upgrading-to-selenium-3-with-my-first-selenium-project/
+
+
+## Notes for Selenium WebDriver 3.0.1
+
+### Running with Firefox
+
+If you are using Firefox 45 Extended Release version (or Firefox < v48) then to run the test from the command line use:
+
+`mvn test -Dtest=MyFirstLegacyFFTest`
+
+If you are using Firefox 48+ and have added Marionette `geckodriver.exe` to the path then use the command line:
 
 `mvn test -Dtest=MyFirstTest`
 
-If you are using Firefox 48+ and have added Marionette to the path then use the command line:
+The following will also work with Firefox 48+, but will fail in a future version of WebDriver because the `MarionetteDriver` is deprecated.
 
 `mvn test -Dtest=MyFirstTestFF48`
+
+### Running with Chrome
 
 If you are using Chrome and have added ChromeDriver to the path then use the command line:
 
 `mvn test -Dtest=MyFirstChromeTest`
+
+## Notes for Selenium WebDriver 2.53.1
+
+### Running with Firefox
+
+If you are using Firefox 45 Extended Release version (or Firefox < v48) then to run the test from the command line use:
+
+`mvn test -Dtest=MyFirstTest`
+
+If you are using Firefox 48+ and have added Marionette `geckodriver.exe` to the path (renamed to `wires.exe`) then use the command line:
+
+`mvn test -Dtest=MyFirstTestFF48`
+
+### Running with Chrome
+
+If you are using Chrome and have added ChromeDriver to the path then use the command line:
+
+`mvn test -Dtest=MyFirstChromeTest`
+
+## Update 19th October 2016
+
+Updated the Notes to cover Firefox on WebDriver 2.53.1 and 3.0.1.
 
 ## Update 4th October 2016
 
