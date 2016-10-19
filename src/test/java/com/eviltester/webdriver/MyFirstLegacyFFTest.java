@@ -20,11 +20,17 @@ public class MyFirstLegacyFFTest {
         capabilities.setCapability("marionette", false);
 
         /* If Firefox < v48 is not your default browser then you need to tell WebDriver where it is,
-           so uncomment the line below and amend the path to the location of your firefox.exe
+           so uncomment the setCapability line below and amend the firefox_binary_path to the location of your firefox.exe
            the example code uses FirefoxPortable from
                 https://sourceforge.net/projects/portableapps/files/Mozilla%20Firefox%2C%20Portable%20Ed./
            */
-        //capabilities.setCapability("firefox_binary", new File(System.getProperty("user.dir"),"/tools/FirefoxPortable/FirefoxPortable.exe").getAbsolutePath());
+
+        // relative location to the project i.e. /tools/FirefoxPortable where /tools is at the same level as /src
+        //String firefox_binary_path = new File(System.getProperty("user.dir"),"/tools/FirefoxPortable/FirefoxPortable.exe").getAbsolutePath();
+        // hard coded location on C drive
+        String firefox_binary_path = "C:\\webdrivers\\FirefoxPortable\\FirefoxPortable.exe";
+
+        //capabilities.setCapability("firefox_binary", firefox_binary_path);
         WebDriver driver = new FirefoxDriver(capabilities);
 
 

@@ -40,13 +40,10 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.53.1</version>
+            <!-- <version>2.53.1</version> -->
             <!-- 19/October.2016
-                version 3.0.1 will work,
-                have just left as v 2.53.1 for the moment,
-                you can upgrade by deleting the above line and
-                removing the html comment tags from the line below -->
-			<!-- <version>3.0.1</version> -->
+                have upgraded to 3.0.1 for MyFirstTest -->
+			<version>3.0.1</version>
         </dependency>
 
 
