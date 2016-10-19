@@ -45,6 +45,8 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 * [`startUsingJavaJunit` project](https://github.com/eviltester/startUsingJavaJUnit)
 * [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
 
+**Note: Currently recommend using `ChromeDriver` as your default driver and the current version of Chrome as your default browser. If you only setup one driver and browser, make it Chrome, it is a lot easier to start with.**
+
 ---
 
 ## Install Sample WebDriver Project on Windows
@@ -59,7 +61,8 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 
 ---
 
-* * `[ ]`check most up to date version of webdriver in the unzipped pom.xml file
+* Check the most up to date version of WebDriver
+    * `[ ]`check most up to date version of WebDriver in the unzipped pom.xml file
     * `[ ]`check the webdriver downloads page or the maven page for the up to date version
     * `[ ]`amend the pom.xml file if the version number is not up to date
     * `[ ]`exit IntelliJ
@@ -70,12 +73,17 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 
 * `[ ]`If install ESR version of Firefox (45) https://www.mozilla.org/en-US/firefox/organizations/faq/
       * `[ ]`no need to download any extra drivers
-      * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
+      * if using WebDriver `2.53.1`
+         * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
+      * if using WebDriver `3.0.1` (or above)
+         * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstLegacyFFTest`
 
-* `[ ]`Install Current version of Firefox
+* `[ ]`If Install Current version of Firefox
       * `[ ]`download GeckoDriver add it to the path
             * https://github.com/mozilla/geckodriver
-       * https://github.com/mozilla/geckodriver/releases
+            * https://github.com/mozilla/geckodriver/releases
+            * if using version 2.53.1 of WebDriver then rename to wires.exe
+            * if using version 3 of WebDriver then leave as geckodriver.exe
       * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTestFF48`
 
 ---
@@ -119,6 +127,9 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
     * `[ ]`visit https://github.com/eviltester/startUsingSeleniumWebDriver
     * `[ ]`download the zip file and unzip somewhere
 
+
+**Note: Currently recommend using `ChromeDriver` as your default driver and the current version of Chrome as your default browser. If you only setup one driver and browser, make it Chrome, it is a lot easier to start with.**
+
 ---
 
 * `[ ]`open project for the unzipped pom.xml file
@@ -136,17 +147,23 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 
 * `[ ]`If install ESR version of Firefox (45) https://www.mozilla.org/en-US/firefox/organizations/faq/
    * `[ ]`no need to download any extra drivers
-   * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
+   * if using WebDriver `2.53.1`
+       * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTest`
+   * if using WebDriver `3.0.1` (or above)
+       * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstLegacyFFTest`
+
 
 ---
 
-* `[ ]`Install Current version of Firefox
+* `[ ]`If Install Current version of Firefox
    * either with cask `brew cask install firefox`
         * or visit the site and install
 * `[ ]`download GeckoDriver add it to the path
    * https://github.com/mozilla/geckodriver
    * https://github.com/mozilla/geckodriver/releases
-   * extract into a folder and rename to wires
+   * extract into a folder
+       * if using version 2.53.1 of WebDriver then rename to wires
+       * if using version 3 of WebDriver then leave as geckodriver
    * add path to `.bash_profile`
    * `export PATH=$PATH:/folder/you/extracted/it/to`
    * `[ ]`in startUsingSeleniumWebDriver folder run command `mvn test -Dtest=MyFirstTestFF48`
