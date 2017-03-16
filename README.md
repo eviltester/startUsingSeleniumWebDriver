@@ -36,6 +36,14 @@ See related blog posts:
 * http://seleniumsimplified.com/2016/10/upgrading-to-selenium-3-with-my-first-selenium-project/
 
 
+## Notes for Selenium WebDriver Above 3.0.1
+
+Versions of Selenium WebDriver 3.1.0 and above have removed the `MarionetteDriver` class, and `FirefoxDriver` should now be used for all versions of Firefox.
+
+The `MyFirstTestFF48` has been commented out in the code.
+
+If you are using version 3.0.1 or below then you can uncomment out the main class code and the imports and you can use this test.
+
 ## Notes for Selenium WebDriver 3.0.1
 
 ### Running with Firefox

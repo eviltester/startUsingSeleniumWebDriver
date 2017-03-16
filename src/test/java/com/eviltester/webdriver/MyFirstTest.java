@@ -18,7 +18,7 @@ public class MyFirstTest {
          * And on
          *     - WebDriver 3
          *     - Firefox 48+
-         *     - geckodriver.exe on the path
+         *     - with geckodriver.exe on the path
          */
 
         WebDriver driver = new FirefoxDriver();

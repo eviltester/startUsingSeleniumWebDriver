@@ -43,7 +43,7 @@
             <!-- <version>2.53.1</version> -->
             <!-- 19/October.2016
                 have upgraded to 3.0.1 for MyFirstTest -->
-			<version>3.0.1</version>
+			<version>3.3.1</version>
         </dependency>
 
 
