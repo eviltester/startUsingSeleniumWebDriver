@@ -28,7 +28,8 @@ public class MyFirstTest {
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));
 
-        driver.close();
+        // For GeckoDriver 0.19 and Firefox 55.0.3, if I close then I get an error, so I decided to just quit instead
+        //driver.close();
         driver.quit();
     }
 }

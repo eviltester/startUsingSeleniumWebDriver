@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
+
 /* run the test code against Firefox v < 48 with the inbuilt Firefox Driver in WebDriver 3 */
 public class MyFirstLegacyFFTest {
 
@@ -37,12 +39,12 @@ public class MyFirstLegacyFFTest {
         // * e.g. you can't have the browsers on C:/ and the run the tests from D:/
         // *
         // relative location to the project i.e. /tools/FirefoxPortable where /tools is at the same level as /src
-        //String firefox_binary_path = new File(System.getProperty("user.dir"),"/tools/FirefoxPortable/FirefoxPortable.exe").getAbsolutePath();
+        String firefox_binary_path = new File(System.getProperty("user.dir"),"/tools/FirefoxPortable/FirefoxPortable.exe").getAbsolutePath();
         // hard coded location on C drive
         // String firefox_binary_path = "C:\\webdrivers\\FirefoxPortable\\FirefoxPortable.exe";
 
         // * if you set a path above then uncomment this line to use it
-        // capabilities.setCapability("firefox_binary", firefox_binary_path);
+        capabilities.setCapability("firefox_binary", firefox_binary_path);
 
         WebDriver driver = new FirefoxDriver(capabilities);
 
