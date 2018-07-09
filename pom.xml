@@ -8,49 +8,39 @@
     <artifactId>MyFirstSeleniumIntelliJMaven</artifactId>
     <version>1.0</version>
 
+
+    <!--
+
+        To run the Firefox test either right click on 'MyFirstTest' and run it, or at the command line type:
+
+        `mvn test -Dtest=MyFirstTest`
+
+
+        To run the Chrome test either right click on 'MyFirstChromeTest' and run it, or at the command line type:
+
+        `mvn test -Dtest=MyFirstChromeTest`
+
+        If you type `mvn test` or try to run all the tests you will need to have all the drivers and browsers installed
+
+    -->
+
     <dependencies>
-
-
-        <!-- Firefox 47 introduced a bug making it fail with 2.53.0, you needed to use the marionette gecko driver -->
-        <!-- Firefox 48+ require the marionette gecko driver -->
-        <!-- Firefox 45, 46, or 47.1 is required for Selenium 2.53.1 -->
-        <!--
-            if you are having issues with Firefox crashing then you might be using a
-            Firefox and Selenium version combination that are out of sync or may be using
-            a version of Firefox that requires the Marionette/wires/geckodriver combination
-
-            Read the following blog posts for more information:
-            - http://seleniumsimplified.com/2016/06/use_selenium_webdriver_jar_locally/
-            - http://seleniumsimplified.com/2016/04/how-to-use-the-firefox-marionette-driver/
-            - http://seleniumsimplified.com/2016/06/using-portable-firefox-46-with-webdriver/
-        -->
-
-        <!-- Explanation of versions
-            3.0.1
-                Firefox 48+ - geckodriver.exe on path and use MyFirstTest to run in Firefox
-                Firefox < 48 - use MyFirstLegacyFFTest
-            2.53.1
-                Firefox < 48 - use MyFirstTest to run in Firefox
-                Firefox 48+ - geckodriver.exe renamed to wires.exe and on path and use MyFirstTestFF48
-
-            Version Independent
-                MyFirstChromeTest will work if ChromeDriver is on the path for either version
-        -->
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <!-- <version>2.53.1</version> -->
-            <!-- 19/October.2016
-                have upgraded to 3.0.1 for MyFirstTest -->
-			<version>3.5.3</version>
+            <!--
+                You might need to update this number to the most recent version,
+                you can find it on the official SeleniumHQ.org download page
+                https://www.seleniumhq.org/download/
+             -->
+			<version>3.13.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

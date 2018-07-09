@@ -11,15 +11,24 @@ public class MyFirstTest {
     public void startWebDriver(){
 
 
-        /**  NOTE:
-         * This test will work on
-         *     - WebDriver 2.53.1
-         *     - Firefox v < 48
-         * And on
-         *     - WebDriver 3
-         *     - Firefox 48+
-         *     - with geckodriver.exe on the path
-         */
+/**
+
+ The following code is for the FirefoxDriver.
+
+ You also need to download the GeckoDriver executable:
+
+ -https://github.com/mozilla/geckodriver/releases
+
+ You can easily install GeckoDriver on windows using chocolatey:
+
+ - https://chocolatey.org/packages/selenium-gecko-driver
+
+ If you are on a Mac then you could install ChromeDriver using HomeBrew
+
+ - http://brewformulas.org/geckodriver
+
+ */
+
 
         WebDriver driver = new FirefoxDriver();
 
@@ -28,8 +37,9 @@ public class MyFirstTest {
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));
 
-        // For GeckoDriver 0.19 and Firefox 55.0.3, if I close then I get an error, so I decided to just quit instead
+        // FirefoxDriver seems to prefer either quit or close, but sometimes throws an error if you use both
         //driver.close();
         driver.quit();
     }
+
 }

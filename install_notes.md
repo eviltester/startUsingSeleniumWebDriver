@@ -4,7 +4,7 @@ Installation on Windows 10 Notes:
 * Using VM from  https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
 * `IEUser` / `Passw0rd!`
 * https://az792536.vo.msecnd.net/vms/release_notes_license_terms_8_1_15.pdf
-
+* used Chocolatey for JDK, IntelliJ, ChromeDriver and GeckoDriver Installs
 
 
 Installation on XP Notes:

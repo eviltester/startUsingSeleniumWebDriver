@@ -11,10 +11,38 @@ public class MyFirstChromeTest {
     public void startWebDriver(){
 
 
-        /* The following code is for the Chrome Driver
-           You also need to download the ChromeDriver executable
-           https://sites.google.com/a/chromium.org/chromedriver/
+/**
+
+The following code is for the Chrome Driver.
+
+You also need to download the ChromeDriver executable:
+
+- https://sites.google.com/a/chromium.org/chromedriver/
+
+You can easily install Chromedriver on windows using chocolatey:
+
+- https://chocolatey.org/packages?q=ChromeDriver
+
+If you are on a Mac then you could install ChromeDriver using HomeBrew
+
+- http://brewformulas.org/Chromedriver
+
+ */
+
+        /**
+
+         if you have not added ChromeDriver to the path then you need to tell Selenium WebDriver where
+         the executable of the driver is located. You can do that using code like the following
+
+         The `chromeDriverLocation` string should be the actual physical path of the executable.
+
+         If you installed through Chocolatey or Homebrew then you should not need the following lines as the
+         executable will be on your path.
+
+         You can tell if the executable is on your path by typing `chromedriver` into a command prompt and if it is
+         a recognised command then it is on your path.
          */
+
         // String currentDir = System.getProperty("user.dir");
         // String chromeDriverLocation = currentDir + "/tools/chromedriver/chromedriver.exe";
         // System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
