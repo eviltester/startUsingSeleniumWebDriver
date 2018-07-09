@@ -26,14 +26,14 @@
 
     <dependencies>
 
+        <!--
+             You might need to update this number to the most recent version,
+             you can find it on the official SeleniumHQ.org download page
+            https://www.seleniumhq.org/download/
+        -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <!--
-                You might need to update this number to the most recent version,
-                you can find it on the official SeleniumHQ.org download page
-                https://www.seleniumhq.org/download/
-             -->
 			<version>3.13.0</version>
         </dependency>
 
