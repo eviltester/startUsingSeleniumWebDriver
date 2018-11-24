@@ -33,7 +33,8 @@ The following code is for the Safari Driver.
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));
 
-        driver.close();
+        // safari driver now seems to prefer just close or quit, but not both
+        //driver.close();
         driver.quit();
     }
 }
