@@ -52,7 +52,7 @@ If you are on a Mac then you could install ChromeDriver using HomeBrew
         // e.g. D:\Users\Alan\Documents\github\startUsingSeleniumWebDriver\tools\chromedriver
         WebDriver driver = new ChromeDriver();
 
-        driver.navigate().to("http://seleniumsimplified.com");
+        driver.navigate().to("https://seleniumsimplified.com");
 
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));

@@ -28,7 +28,7 @@ The following code is for the Safari Driver.
 
         WebDriver driver = new SafariDriver();
 
-        driver.navigate().to("http://seleniumsimplified.com");
+        driver.navigate().to("https://seleniumsimplified.com");
 
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));

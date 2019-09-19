@@ -32,7 +32,7 @@ public class MyFirstTest {
 
         WebDriver driver = new FirefoxDriver();
 
-        driver.navigate().to("http://seleniumsimplified.com");
+        driver.navigate().to("https://seleniumsimplified.com");
 
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));
