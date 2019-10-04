@@ -2,13 +2,34 @@ package com.eviltester.webdriver;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyFirstChromeTest {
 
     @Test
     public void startWebDriver(){
+
+        driver.navigate().to("https://seleniumsimplified.com");
+
+        driver.manage().window().fullscreen();
+
+        WebElement blog = driver.findElement(By.cssSelector("[title='Blog']"));
+        blog.click();
+
+        Assert.assertTrue("title should start differently",
+                driver.getTitle().startsWith("Selenium Simplified"));
+
+        driver.close();
+        driver.quit();
+
+    }
+
+
+    WebDriver driver = new ChromeDriver();
 
 
 /**
@@ -43,21 +64,15 @@ If you are on a Mac then you could install ChromeDriver using HomeBrew
          a recognised command then it is on your path.
          */
 
-        // String currentDir = System.getProperty("user.dir");
-        // String chromeDriverLocation = currentDir + "/tools/chromedriver/chromedriver.exe";
-        // System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
+        //String currentDir = System.getProperty("user.dir");
+        //String chromeDriverLocation = currentDir + "C:\\Program Files\\Java\\jdk1.8.0_191\\bin\\chromedriver.exe";
+        //System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
 
         //If you add the folder with chromedriver.exe to the path then you only need the following line
         // and you don't need to set the property as listed in the 3 lines above
         // e.g. D:\Users\Alan\Documents\github\startUsingSeleniumWebDriver\tools\chromedriver
-        WebDriver driver = new ChromeDriver();
 
-        driver.navigate().to("https://seleniumsimplified.com");
 
-        Assert.assertTrue("title should start differently",
-                            driver.getTitle().startsWith("Selenium Simplified"));
 
-        driver.close();
-        driver.quit();
+
     }
-}
