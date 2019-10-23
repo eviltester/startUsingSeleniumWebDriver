@@ -192,8 +192,9 @@ We need to enable remote execution in Safari Browser to use it.
    * either with cask `brew cask install firefox`
         * or visit the site and install
 * `[ ]` Install GeckoDriver
-    * http://brewformulas.org/geckodriver       
-        * `brew install geckodriver`        
+   - https://brew.sh/
+        - https://formulae.brew.sh/formula/geckodriver
+   * `brew install geckodriver`        
         
 ---
 
@@ -203,10 +204,9 @@ We need to enable remote execution in Safari Browser to use it.
       * either with cask `brew cask install google-chrome`
       * or visit the site and install
 * `[ ]` Install ChromeDriver using HomeBrew
-   * http://brewformulas.org/Chromedriver
-   * from version [2.37 we need to install as a cask](https://github.com/Homebrew/homebrew-core/issues/26759)
-       * `brew cask install chromedriver`
-       * `brew install chromedriver` will install the older version 2.37
+   * https://brew.sh/
+       - https://formulae.brew.sh/cask/chromedriver#default
+   * `brew cask install chromedriver`
 
 ---
 
@@ -283,7 +283,7 @@ Generic Links:
     * https://github.com/mozilla/geckodriver/releases
 
 + Mac HomeBrew and Cask
-    * http://brew.sh
+    * https://brew.sh
     * https://caskroom.github.io/
 
 
@@ -300,8 +300,8 @@ By Alan Richardson
 * www.eviltester.com
 * www.javafortesters.com
 * www.compendiumdev.co.uk
-* http://uk.linkedin.com/in/eviltester
-* [@eviltester](http://twitter.com/eviltester)
+* https://uk.linkedin.com/in/eviltester
+* [@eviltester](https://twitter.com/eviltester)
 
 
 

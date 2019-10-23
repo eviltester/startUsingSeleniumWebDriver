@@ -39,9 +39,9 @@ You may also wish to edit the `pom.xml` file and change the version of Selenium 
 
 *Author: Alan Richardson*
 
-* [SeleniumSimplified.com](http://seleniumsimplified.com)
-* [Compendium Developments](http://compendiumdev.co.uk)
-
+* [EvilTester.com](https://eviltester.com)
+* [Compendium Developments](https://compendiumdev.co.uk)
+* [SeleniumSimplified.com](https://seleniumsimplified.com)
 
 
 
