@@ -165,7 +165,7 @@ For instructions on how to install Java, Maven and IntelliJ; and check they are 
 * `[ ]`open project for the unzipped pom.xml file
 
 * `[ ]`check most up to date version of webdriver in the unzipped pom.xml file
-    * `[ ]`check the [Selenium webdriver downloads](http://www.seleniumhq.org/download/) page or the maven page for the up to date version
+    * `[ ]`check the [Selenium webdriver downloads](https://www.selenium.dev/downloads/) page for the up to date version
         * I do not recommend using a beta version
     * `[ ]`amend the `pom.xml` file if the version number is not up to date
     * `[ ]`exit IntelliJ
@@ -195,7 +195,9 @@ We need to enable remote execution in Safari Browser to use it.
    - https://brew.sh/
         - https://formulae.brew.sh/formula/geckodriver
    * `brew install geckodriver`        
-        
+       
+Note: to upgrade use `brew cask upgrade`
+
 ---
 
 ##  Install Chrome and ChromeDriver on Mac
@@ -207,6 +209,8 @@ We need to enable remote execution in Safari Browser to use it.
    * https://brew.sh/
        - https://formulae.brew.sh/cask/chromedriver#default
    * `brew cask install chromedriver`
+
+Note: to upgrade use `brew cask upgrade`
 
 ---
 
@@ -249,6 +253,14 @@ Remember you can skip this step if you used HomeBrew.
 
 * `[ ]`When the test runs from the IDE, you are finished your install and setup
 
+> **Note: on mac if you experience an error running ChromeDriver `"chromedriver" cannot be opened because the developer cannot be verified.`** then try the answers here:** https://stackoverflow.com/questions/60362018/
+> 
+> - I use `which chromedriver` to find out where chromedriver is installed
+> - `cd /usr/local/Caskroom/chromedriver/` to go to chromedriver install
+> - `ls` to find out the version of chromedriver then
+> - `cd 83.0.4103.39` where `82.0.4103.39` was the version shown when I typed `ls`
+> - then `xattr -d com.apple.quarantine chromedriver`
+
 
 ---
 
@@ -272,8 +284,7 @@ Generic Links:
 ---
 
 + Check current webdriver version from
-    * http://docs.seleniumhq.org/download/
-    * http://docs.seleniumhq.org/download/maven.jsp
+    * https://www.selenium.dev/downloads/
 
 + ChromeDriver
     * https://sites.google.com/a/chromium.org/chromedriver/
