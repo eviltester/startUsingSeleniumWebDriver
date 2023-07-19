@@ -260,6 +260,8 @@ Remember you can skip this step if you used HomeBrew.
 > - `ls` to find out the version of chromedriver then
 > - `cd 83.0.4103.39` where `82.0.4103.39` was the version shown when I typed `ls`
 > - then `xattr -d com.apple.quarantine chromedriver`
+> 
+> Short cut command for this `xattr -d com.apple.quarantine $(which chromedriver)`
 
 
 ---

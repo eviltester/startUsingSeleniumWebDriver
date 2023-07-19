@@ -41,7 +41,6 @@ You may also wish to edit the `pom.xml` file and change the version of Selenium 
 
 * [EvilTester.com](https://eviltester.com)
 * [Compendium Developments](https://compendiumdev.co.uk)
-* [SeleniumSimplified.com](https://seleniumsimplified.com)
 
 
 
