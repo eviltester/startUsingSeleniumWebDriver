@@ -2,6 +2,7 @@ package com.eviltester.webdriver;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -45,10 +46,12 @@ brew upgrade geckodriver
 
         WebDriver driver = new FirefoxDriver();
 
-        driver.navigate().to("https://testpages.herokuapp.com");
+        driver.navigate().to("https://testpages.eviltester.com/styled/basic-web-page-test.html");
 
-        Assert.assertTrue("title should start with Selenium",
-                            driver.getTitle().startsWith("Selenium"));
+        Assert.assertEquals(
+                "Basic Web Page Example",
+                driver.findElement(By.tagName("h1")).getText()
+        );
 
         // FirefoxDriver seems to prefer either quit or close, but sometimes throws an error if you use both
         //driver.close();

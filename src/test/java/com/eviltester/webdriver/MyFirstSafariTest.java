@@ -2,6 +2,7 @@ package com.eviltester.webdriver;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -28,10 +29,12 @@ public class MyFirstSafariTest {
 
         WebDriver driver = new SafariDriver();
 
-        driver.navigate().to("https://testpages.herokuapp.com");
+        driver.navigate().to("https://testpages.eviltester.com/styled/basic-web-page-test.html");
 
-        Assert.assertTrue("title should start with Selenium",
-                            driver.getTitle().startsWith("Selenium"));
+        Assert.assertEquals(
+                "Basic Web Page Example",
+                driver.findElement(By.tagName("h1")).getText()
+        );
 
         // safari driver now seems to prefer just close or quit, but not both
         //driver.close();
