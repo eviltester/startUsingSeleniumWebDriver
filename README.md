@@ -1,6 +1,13 @@
 startUsingSeleniumWebDriver
 ===========================
 
+**Recommend using the start Using Selenium 4 repo. This repo is for Selenium 3**
+- [Start Using Selenium 4](https://github.com/eviltester/startUsingSelenium4Java)
+
+
+**This repo is deprecated and based on WebDriver 3**
+
+
 Source code to support getting started using Selenium WebDriver with Java
 
 The source code has only really been uploaded in case people encounter problems following the instructions or make a very simple mistake that they cannot figure out.
