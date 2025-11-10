@@ -1,9 +1,13 @@
 package com.eviltester.webdriver.browsers;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -13,9 +17,10 @@ public class ConfigurableFirefoxTest {
      The following code is for the Firefox Driver.
     */
 
-    @Test
-    public void startWebDriver(){
+    static WebDriver driver;
 
+    @BeforeAll
+    public static void initiateWebDriver(){
         FirefoxOptions options = new FirefoxOptions();
         if(System.getenv().
                 getOrDefault("BROWSER_STATE","show").
@@ -23,7 +28,11 @@ public class ConfigurableFirefoxTest {
             options.addArguments("--headless");
         }
 
-        WebDriver driver = new FirefoxDriver(options);
+        driver = new FirefoxDriver(options);
+    }
+
+    @Test
+    public void startWebDriver(){
 
         driver.navigate().to("https://testpages.eviltester.com/pages/basics/basic-web-page/");
 
@@ -32,7 +41,10 @@ public class ConfigurableFirefoxTest {
         "Basic Web Page"
         );
 
-        // driver.close();
+    }
+
+    @AfterAll
+    public static void closeWebDriver(){
         driver.quit();
     }
 

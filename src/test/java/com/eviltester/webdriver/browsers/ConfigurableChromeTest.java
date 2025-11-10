@@ -1,7 +1,6 @@
 package com.eviltester.webdriver.browsers;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,9 +12,10 @@ public class ConfigurableChromeTest {
      The following code is for the Chrome Driver.
     */
 
-    @Test
-    public void startWebDriver(){
+    static WebDriver driver;
 
+    @BeforeAll
+    public static void initiateWebDriver(){
         ChromeOptions options = new ChromeOptions();
         if(System.getenv().
                 getOrDefault("BROWSER_STATE","show").
@@ -23,7 +23,12 @@ public class ConfigurableChromeTest {
             options.addArguments("--headless");
         }
 
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
+    }
+
+
+    @Test
+    public void startWebDriver(){
 
         driver.navigate().to("https://testpages.eviltester.com/pages/basics/basic-web-page/");
 
@@ -32,7 +37,10 @@ public class ConfigurableChromeTest {
         "Basic Web Page"
         );
 
-        //driver.close();
+    }
+
+    @AfterAll
+    public static void closeWebDriver(){
         driver.quit();
     }
 
