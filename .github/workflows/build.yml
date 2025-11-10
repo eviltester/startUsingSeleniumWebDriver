@@ -1,0 +1,32 @@
+name: build
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 1 * * 6' # weekly check that it still works
+
+env:
+  BROWSER_STATE: Headless
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/actions/checkout
+      - name: Download repository
+        uses: actions/checkout@v3
+
+      # https://github.com/actions/setup-java
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 18
+
+      - name: setup chrome
+        uses: browser-actions/setup-chrome@v1
+        
+      - run: chrome --version
+
+      - name: Test with Maven
+        run: mvn test

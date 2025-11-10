@@ -5,23 +5,38 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eviltester.com</groupId>
-    <artifactId>MyFirstSeleniumIntelliJMaven</artifactId>
+    <artifactId>startUsingSelenium4</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- add junit -->
+        <junit.jupiter.version>5.6.2</junit.jupiter.version>
+
+        <!-- configure the compiler via properties rather than plugin -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <!-- use maven surefire to run the tests -->
+        <maven.surefire.version>3.2.5</maven.surefire.version>
+
+        <!-- to generate html junit reports for test phase -->
+        <maven-site-plugin.version>4.0.0-M14</maven-site-plugin.version>
+        <maven.surefire.report.version>3.2.5</maven.surefire.report.version>
+
+
+        <!-- configure webdriver version -->
+        <selenium-webdriver-version>4.20.0</selenium-webdriver-version>
+    </properties>
 
     <!--
-
-        To run the Firefox test either right click on 'MyFirstTest' and run it, or at the command line type:
-
-        `mvn test -Dtest=MyFirstTest`
-
-
-        To run the Chrome test either right click on 'MyFirstChromeTest' and run it, or at the command line type:
+        To run the Chrome test either right click on 'MyFirstChromeTest'
+        and run it, or at the command line type:
 
         `mvn test -Dtest=MyFirstChromeTest`
 
-        If you type `mvn test` or try to run all the tests you will need to have all the drivers and browsers installed
-
+        If you type `mvn test` it will run all the tests.
     -->
 
     <dependencies>
@@ -34,32 +49,64 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+            <version>${selenium-webdriver-version}</version>
+            <scope>test</scope>
         </dependency>
 
+        <!-- adding the api and engine allow JUnit 5 to work -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
-
-    <!-- added source version configuration because of reports of it compiling against Java 1.5 -->
     <build>
         <plugins>
+            <!--
+                Maven Surefire Plugin to run the Unit tests
+                https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
             </plugin>
+
+            <!--
+                Maven Site Plugin to create the HTML site
+                https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+             -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site-plugin.version}</version>
+            </plugin>
+
         </plugins>
     </build>
+
+    <!-- `mvn clean test site` to generate the junit html report in ./target/site -->
+    <reporting>
+        <plugins>
+            <!--
+                Maven Reports Plugin to generate the HTML reports
+                https://maven.apache.org/surefire/maven-surefire-report-plugin/index.html
+             -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven.surefire.report.version}</version>
+            </plugin>
+
+        </plugins>
+    </reporting>
 
 </project>

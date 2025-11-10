@@ -1,71 +1,65 @@
-startUsingSeleniumWebDriver
+Start Using Selenium WebDriver
 ===========================
 
-**Recommend using the start Using Selenium 4 repo. This repo is for Selenium 3**
-- [Start Using Selenium 4](https://github.com/eviltester/startUsingSelenium4Java)
+[![build status](https://github.com/eviltester/startUsingSeleniumWebDriver/actions/workflows/build.yml/badge.svg)](https://github.com/eviltester/startUsingSeleniumWebDriver/actions)
 
+Simple start example for Selenium 4 with java and JUnit 5.
 
-**This repo is deprecated and based on WebDriver 3**
+- For previous versions of WebDriver and JUnit see the releases page.
 
+It has the basic startup and configuration for a test using Chrome Driver.
 
-Source code to support getting started using Selenium WebDriver with Java
+## Pre-Requisites
 
-The source code has only really been uploaded in case people encounter problems following the instructions or make a very simple mistake that they cannot figure out.
+Pre-requisites are ([use quick start guide to install these](https://github.com/eviltester/startUsingJavaJUnit5/blob/main/speedrun_install_java_checklist.md)):
 
-Please read the comments below, and the source code comments if you are having trouble starting work with Firefox.
+- a Java SDK
+- maven
+- and and IDE Install.
 
+The code uses JUnit 5 so you can follow the Quick Start Guide in the "[Getting Started with JUnit 5 repo](https://github.com/eviltester/startUsingJavaJUnit5)"
 
-## Steps
+- [Quick start guide is here](https://github.com/eviltester/startUsingJavaJUnit5/blob/main/speedrun_install_java_checklist.md)
 
-* First install Java, Maven and IntelliJ
-    * [Java Install Checklist](https://github.com/eviltester/startUsingJavaJUnit/blob/master/speedrun_install_java_checklist.md)
-* Second install Firefox, GeckoDriver, Chrome and ChromeDriver
-    * [WebDriver Install Checklist](https://github.com/eviltester/startUsingSeleniumWebDriver/blob/master/speedrun_install_checklist.md)
+## Start By
 
+Clone or download the repo as a zip.
 
-## Run a Test on your chosen browser
+From the unzipped top level directory containing the 'pom.xml' file, you can run the test using:
 
-If you are on a mac and have allowed Remote Execution in the Safari browser then you can use the command line:
+`mvn test`
 
-`mvn test -Dtest=MyFirstSafariTest`
+And can run it using headless mode by setting the environment variable `BROWSER_STATE` to have the value "`Headless`"
 
-If you are using Chrome and have added ChromeDriver to the path then use the command line:
+e.g.
 
-`mvn test -Dtest=MyFirstChromeTest`
+```
+BROWSER_STATE=Headless mvn test
+```
 
-If you are using Firefox and have added GeckoDriver to the path then use the command line:
+## Use the code
 
-`mvn test -Dtest=MyFirstTest`
+Open the project in Intellij by opening the folder containing the 'pom.xml' or open the 'pom.xml'.
 
-Do not run `mvn test` because some of the tests are Platform and WebDriver version dependant and at least one will probably fail.
+## Github Actions
 
-## Update `pom.xml`
+The repo also has [Github actions](https://github.com/eviltester/startUsingJavaJUnit5/blob/main/.github/workflows/build.yml) to run the test in headless mode periodically.
 
-You may also wish to edit the `pom.xml` file and change the version of Selenium WebDriver to the current version listed on [seleniumhq.org](https://www.seleniumhq.org) in the [downloads section](https://www.seleniumhq.org/download/)
+## About Selenium WebDriver 4
 
+This uses Selenium 4.
 
-*Author: Alan Richardson*
+Selenium 4 comes with a builtin WebDriver Manager
 
-* [EvilTester.com](https://eviltester.com)
-* [Compendium Developments](https://compendiumdev.co.uk)
+https://www.selenium.dev/blog/2022/introducing-selenium-manager/
 
+This will automatically download the drivers required to allow Selenium to use the chosen webdriver.
 
+e.g. if you instantiate a `new ChromeDriver()` the WebDriver Manager will download the drivers for
+Chrome and run the tests against Chrome.
 
-## Running with Chrome
+You just need to download and have Chrome installed.
 
-If you are using Chrome and have added ChromeDriver to the path then use the command line:
+Similarly, with Firefox and Edge, just download the browser and Selenium will download the correct driver.
 
-`mvn test -Dtest=MyFirstChromeTest`
-
-## Running with Firefox
-
-If you are using Firefox and have added GeckoDriver to the path then use the command line:
-
-`mvn test -Dtest=MyFirstTest`
-
-## Earlier versions of Firefox
-
-If you wish to use earlier versions of Firefox then see the repo:
-
-https://github.com/eviltester/startUsingLegacyFirefoxWebDriver
 
