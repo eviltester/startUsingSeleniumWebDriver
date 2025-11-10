@@ -27,7 +27,7 @@
 
 
         <!-- configure webdriver version -->
-        <selenium-webdriver-version>4.36.0</selenium-webdriver-version>
+        <selenium-webdriver-version>4.38.0</selenium-webdriver-version>
     </properties>
 
     <!--
