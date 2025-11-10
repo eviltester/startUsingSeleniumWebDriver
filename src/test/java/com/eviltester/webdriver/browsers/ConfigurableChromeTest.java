@@ -1,4 +1,4 @@
-package com.eviltester.webdriver.basics;
+package com.eviltester.webdriver.browsers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class MyFirstChromeTest {
+public class ConfigurableChromeTest {
 
     /**
      The following code is for the Chrome Driver.
