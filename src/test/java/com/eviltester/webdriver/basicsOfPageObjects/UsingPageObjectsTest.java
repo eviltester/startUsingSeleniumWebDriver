@@ -1,14 +1,13 @@
-package com.eviltester.webdriver.basics;
+package com.eviltester.webdriver.basicsOfPageObjects;
 
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BeforeAfterChromeTest {
+public class UsingPageObjectsTest {
 
     static WebDriver driver;
+    private BasicWebPage page;
 
     @BeforeAll
     public static void initiateWebDriver(){
@@ -17,16 +16,13 @@ public class BeforeAfterChromeTest {
 
     @BeforeEach
     public void loadPage(){
-        driver.get(
-                "https://testpages.eviltester.com/pages/basics/basic-web-page/"
-        );
+        page = new BasicWebPage(driver);
+        page.get();
     }
 
     @Test
     public void pageHasCorrectHeading(){
-        WebElement elem = driver.findElement(By.tagName("h1"));
-
-        Assertions.assertEquals(elem.getText(), "Basic Web Page");
+        Assertions.assertEquals(page.getHeadingText(), "Basic Web Page");
     }
 
     @AfterAll
