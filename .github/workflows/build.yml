@@ -30,8 +30,10 @@ jobs:
         working-directory: ${{ github.workspace }}
         run: ls -la
         
-      - name: Test with Maven
-        run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test -Dtest=AFirstChromeTest
+      - name: Test with Maven (and xvfb)
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test -Dtest=AFirstChromeTest
 
       - name: what fin
         if: always()
