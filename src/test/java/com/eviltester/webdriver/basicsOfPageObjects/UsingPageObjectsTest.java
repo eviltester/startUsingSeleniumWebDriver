@@ -12,7 +12,6 @@ public class UsingPageObjectsTest {
 
     @BeforeAll
     public static void initiateWebDriver(){
-        System.setProperty("webdriver.chrome.verboseLogging", "true");
         driver = new ChromeDriver();
     }
 
