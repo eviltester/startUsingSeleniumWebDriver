@@ -9,6 +9,14 @@ Simple start example for Selenium 4 with java and JUnit 5.
 
 It has the basic startup and configuration for a test using Chrome Driver.
 
+Supporting text description of the contents of this repo can be found:
+
+- https://testpages.eviltester.com/reference/automating/webdriver/webdriver-java/
+
+The pages used as the system under test are:
+
+- https://testpages.eviltester.com
+
 ## Pre-Requisites
 
 Pre-requisites are ([use quick start guide to install these](https://github.com/eviltester/startUsingJavaJUnit5/blob/main/speedrun_install_java_checklist.md)):
