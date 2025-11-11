@@ -24,10 +24,9 @@ jobs:
           java-version: 21
 
       - name: Test with Maven
-        run: mvn test
+        run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test
 
       - name: Show logs
         run: |
-          cat /home/runner/chromedriver.log
+          cat ${{ github.workspace }}/chromedriver.log
         shell: bash
-

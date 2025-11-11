@@ -70,12 +70,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
-                <configuration>
-                    <systemPropertyVariables>
-                        <webdriver.chrome.verboseLogging>true</webdriver.chrome.verboseLogging>
-                        <webdriver.chrome.logfile>/home/runner/chromedriver.log</webdriver.chrome.logfile>
-                    </systemPropertyVariables>
-                </configuration>
             </plugin>
 
             <!--
