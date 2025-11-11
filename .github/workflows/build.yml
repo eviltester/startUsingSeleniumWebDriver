@@ -22,25 +22,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 21
-
-      - name: where
-        run: echo ${{ github.workspace }}
-
-      - name: what there
-        working-directory: ${{ github.workspace }}
-        run: ls -la
         
       - name: Test with Maven (and xvfb)
         uses: GabrielBB/xvfb-action@v1
         with:
-          run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test -Dtest=AFirstChromeTest
-
-      - name: what fin
-        if: always()
-        working-directory: ${{ github.workspace }}
-        run: ls -la
+          run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test
         
       - name: Show logs
-        if: always()
+        if: failure()
         run: |
           cat ${{ github.workspace }}/chromedriver.log
