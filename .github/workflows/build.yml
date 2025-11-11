@@ -34,9 +34,11 @@ jobs:
         run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test
 
       - name: what fin
+        if: always()
         working-directory: ${{ github.workspace }}
         run: ls -la
         
       - name: Show logs
+        if: always()
         run: |
           cat ${{ github.workspace }}/chromedriver.log
