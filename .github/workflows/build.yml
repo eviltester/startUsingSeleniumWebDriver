@@ -23,10 +23,20 @@ jobs:
           distribution: 'temurin'
           java-version: 21
 
+      - name: where
+        run: echo ${{ github.workspace }}
+
+      - name: what there
+        working-directory: ${{ github.workspace }}
+        run: ls -la
+        
       - name: Test with Maven
         run: mvn -Dwebdriver.chrome.logfile=${{ github.workspace }}/chromedriver.log -Dwebdriver.chrome.verboseLogging=true test
 
+      - name: what fin
+        working-directory: ${{ github.workspace }}
+        run: ls -la
+        
       - name: Show logs
         run: |
           cat ${{ github.workspace }}/chromedriver.log
-        shell: bash
