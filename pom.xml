@@ -5,14 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eviltester.com</groupId>
-    <artifactId>startUsingSelenium4</artifactId>
+    <artifactId>startUsingSeleniumWebDriver</artifactId>
     <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <!-- add junit -->
         <junit.jupiter.version>5.14.0</junit.jupiter.version>
+
+        <!-- configure webdriver version -->
+        <selenium-webdriver-version>4.38.0</selenium-webdriver-version>
 
         <!-- configure the compiler via properties rather than plugin -->
         <maven.compiler.source>21</maven.compiler.source>
@@ -24,17 +26,13 @@
         <!-- to generate html junit reports for test phase -->
         <maven-site-plugin.version>4.0.0-M14</maven-site-plugin.version>
         <maven.surefire.report.version>3.2.5</maven.surefire.report.version>
-
-
-        <!-- configure webdriver version -->
-        <selenium-webdriver-version>4.38.0</selenium-webdriver-version>
     </properties>
 
     <!--
-        To run the Chrome test either right click on 'MyFirstChromeTest'
+        To run the basic Chrome test either right click on 'AFirstChromeTest'
         and run it, or at the command line type:
 
-        `mvn test -Dtest=MyFirstChromeTest`
+        `mvn test -Dtest=AFirstChromeTest`
 
         If you type `mvn test` it will run all the tests.
     -->
@@ -44,7 +42,7 @@
         <!--
              You might need to update this number to the most recent version,
              you can find it on the official SeleniumHQ.org download page
-            https://www.seleniumhq.org/download/
+            https://www.selenium.dev/downloads/
         -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -64,7 +62,8 @@
     <build>
         <plugins>
             <!--
-                Maven Surefire Plugin to run the Unit tests
+                Maven Surefire Plugin to run the Unit tests and generate
+                xml reports
                 https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
              -->
             <plugin>

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AFirstChromeTest {
     @Test
-    public void startWithWebDriver(){
+    public void myFirstWebDriverTest(){
 
         WebDriver driver = new ChromeDriver();
 
@@ -17,9 +17,9 @@ public class AFirstChromeTest {
             "https://testpages.eviltester.com/pages/basics/basic-web-page/"
         );
 
-        WebElement elem = driver.findElement(By.tagName("h1"));
+        WebElement button = driver.findElement(By.id("button1"));
 
-        Assertions.assertEquals(elem.getText(), "Basic Web Page");
+        Assertions.assertEquals("Click Me", button.getText());
 
         driver.quit();
     }

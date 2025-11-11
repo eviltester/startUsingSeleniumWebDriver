@@ -23,10 +23,10 @@ public class BeforeAfterChromeTest {
     }
 
     @Test
-    public void pageHasCorrectHeading(){
-        WebElement elem = driver.findElement(By.tagName("h1"));
+    public void buttonHasCorrectText(){
+        WebElement button = driver.findElement(By.id("button1"));
 
-        Assertions.assertEquals(elem.getText(), "Basic Web Page");
+        Assertions.assertEquals("Click Me", button.getText());
     }
 
     @AfterAll

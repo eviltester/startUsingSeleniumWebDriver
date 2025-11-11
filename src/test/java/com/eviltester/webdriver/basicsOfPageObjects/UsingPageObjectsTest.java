@@ -21,8 +21,8 @@ public class UsingPageObjectsTest {
     }
 
     @Test
-    public void pageHasCorrectHeading(){
-        Assertions.assertEquals(page.getHeadingText(), "Basic Web Page");
+    public void pageHasCorrectButtonText(){
+        Assertions.assertEquals(page.getButtonText(), "Click Me");
     }
 
     @AfterAll

@@ -1,5 +1,6 @@
 package com.eviltester.webdriver.browsers;
 
+import com.eviltester.webdriver.basicsOfPageObjects.BasicWebPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -34,11 +35,12 @@ public class ConfigurableFirefoxTest {
     @Test
     public void startWebDriver(){
 
-        driver.navigate().to("https://testpages.eviltester.com/pages/basics/basic-web-page/");
+        BasicWebPage page = new BasicWebPage(driver);
+        page.get();
 
         Assertions.assertEquals(
-            driver.findElement(By.tagName("h1")).getText(),
-        "Basic Web Page"
+                "Click Me",
+                page.getButton().getText()
         );
 
     }
