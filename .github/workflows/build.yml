@@ -25,3 +25,9 @@ jobs:
 
       - name: Test with Maven
         run: mvn test
+
+      - name: Show logs
+        run: |
+          cat /home/runner/chromedriver.log
+        shell: bash
+
